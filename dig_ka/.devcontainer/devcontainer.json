@@ -1,0 +1,17 @@
+{
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    "features": {
+        "flutter": "latest"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dart-code.flutter",
+                "dart-code.dart-code"
+            ]
+        }
+    },
+    "forwardPorts": [4000],
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ninja-build build-essential cmake pkg-config && flutter pub get",
+    "remoteUser": "root"
+}
